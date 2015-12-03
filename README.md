@@ -32,8 +32,8 @@ for example `RegExp` gives `[object Function]` and `Uint8Array`
 gives `[object Object]` on certain engines. While these and more could
 be fixed, it was decided that this should be a very raw version and it
 is left to the coder to use other `is` implimentations for detection.
-It is also woth that as of ES6 `Symbol.toStringTag` can be set on object
-and can report any string that it wishes.
+It is also worth noting that as of ES6 `Symbol.toStringTag` can be set on
+and object and therefore can report any string that it wishes.
 
 **Version**: 1.0.0  
 **Author:** Xotic750 <Xotic750@gmail.com>  
