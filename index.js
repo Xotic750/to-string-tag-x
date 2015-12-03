@@ -33,7 +33,7 @@
  * be fixed, it was decided that this should be a very raw version and it
  * is left to the coder to use other `is` implimentations for detection.
  * It is also worth noting that as of ES6 `Symbol.toStringTag` can be set on
- * and object and therefore can report any string that it wishes.
+ * an object and therefore can report any string that it wishes.
  * @version 1.0.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
