@@ -20,7 +20,19 @@ alt="devDependency status" height="18"/>
 alt="npm version" height="18">
 </a>
 
-Get an object's @@toStringTag.
+Get an object's @@toStringTag. Includes fixes to correct ES3 differences
+for the following.
+- undefined => '[object Undefined]'
+- null => '[object Null]'
+No other fixes are included, so legacy `arguments` will
+give `[object Object]`, and many older native objects
+give `[object Object]`. There are also other environmental bugs
+for example `RegExp` gives `[object Function]` and `Uint8Array`
+gives `[object Object]` on certain engines. While these and more could
+be fixed, it was decided that this should be a very raw version and it
+is left to the coder to use other `is` implimentations for detection.
+It is also woth that as of ES6 `Symbol.toStringTag` can be set on object
+and can report any string that it wishes.
 
 **Version**: 1.0.0  
 **Author:** Xotic750 <Xotic750@gmail.com>  
@@ -29,12 +41,7 @@ Get an object's @@toStringTag.
 <a name="exp_module_to-string-tag-x--module.exports"></a>
 ### `module.exports(value)` ⇒ <code>string</code> ⏏
 The `toStringTag` method returns "[object type]", where type is the
-object type. Includes fixes to correct environmental differences.
-- undefined
-- null
-- arguments
-- RegExp
-- Function
+object type.
 
 **Kind**: Exported function  
 **Returns**: <code>string</code> - The object type string.  

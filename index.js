@@ -20,7 +20,19 @@
  * alt="npm version" height="18">
  * </a>
  *
- * Get an object's @@toStringTag.
+ * Get an object's @@toStringTag. Includes fixes to correct ES3 differences
+ * for the following.
+ * - undefined => '[object Undefined]'
+ * - null => '[object Null]'
+ * No other fixes are included, so legacy `arguments` will
+ * give `[object Object]`, and many older native objects
+ * give `[object Object]`. There are also other environmental bugs
+ * for example `RegExp` gives `[object Function]` and `Uint8Array`
+ * gives `[object Object]` on certain engines. While these and more could
+ * be fixed, it was decided that this should be a very raw version and it
+ * is left to the coder to use other `is` implimentations for detection.
+ * It is also woth that as of ES6 `Symbol.toStringTag` can be set on object
+ * and can report any string that it wishes.
  * @version 1.0.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
@@ -42,17 +54,11 @@
   'use strict';
 
   var pToString = Object.prototype.toString,
-    ES = require('es-abstract/es6'),
-    isArguments = require('is-arguments');
+    ES = require('es-abstract/es6');
 
   /**
    * The `toStringTag` method returns "[object type]", where type is the
-   * object type. Includes fixes to correct environmental differences.
-   * - undefined
-   * - null
-   * - arguments
-   * - RegExp
-   * - Function
+   * object type.
    *
    * @param {*} value The object of which to get the object type string.
    * @return {string} The object type string.
@@ -67,15 +73,6 @@
     }
     if (typeof value === 'undefined') {
       return '[object Undefined]';
-    }
-    if (isArguments(value)) {
-      return '[object Arguments]';
-    }
-    if (ES.IsRegExp(value)) {
-      return '[object RegExp]';
-    }
-    if (ES.IsCallable(value)) {
-      return '[object Function]';
     }
     return ES.Call(pToString, value);
   };
