@@ -24,6 +24,7 @@ Get an object's @@toStringTag. Includes fixes to correct ES3 differences
 for the following.
 - undefined => '[object Undefined]'
 - null => '[object Null]'
+
 No other fixes are included, so legacy `arguments` will
 give `[object Object]`, and many older native objects
 give `[object Object]`. There are also other environmental bugs
