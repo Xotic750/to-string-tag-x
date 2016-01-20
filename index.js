@@ -52,7 +52,7 @@
  * `es6.shim.js` provides compatibility shims so that legacy JavaScript engines
  * behave as closely as possible to ECMAScript 6 (Harmony).
  *
- * @version 1.0.5
+ * @version 1.0.6
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -65,7 +65,7 @@
   freeze:true, futurehostile:true, latedef:true, newcap:true, nocomma:true,
   nonbsp:true, singleGroups:true, strict:true, undef:true, unused:true,
   es3:true, esnext:false, plusplus:true, maxparams:1, maxdepth:1,
-  maxstatements:5, maxcomplexity:3 */
+  maxstatements:6, maxcomplexity:3 */
 
 /*global module */
 
@@ -73,6 +73,8 @@
   'use strict';
 
   var pToString = Object.prototype.toString;
+  var isNull = require('lodash.isnull');
+  var isUndefined = require('validate.io-undefined');
   var nullTag = '[object Null]';
   var undefTag = '[object Undefined]';
 
@@ -88,10 +90,10 @@
    * toStringTag(o); // returns '[object Object]'
    */
   module.exports = function toStringTag(value) {
-    if (value === null) {
+    if (isNull(value)) {
       return nullTag;
     }
-    if (typeof value === 'undefined') {
+    if (isUndefined(value)) {
       return undefTag;
     }
     return pToString.call(value);
