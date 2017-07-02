@@ -26,7 +26,7 @@ Get an object's ES6 @@toStringTag.
 Requires ES3 or above.
 
 **See**: [19.1.3.6 Object.prototype.toString ( )](http://www.ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)  
-**Version**: 1.2.0  
+**Version**: 1.3.0  
 **Author**: Xotic750 <Xotic750@gmail.com>  
 **License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
 **Copyright**: Xotic750  
@@ -45,7 +45,8 @@ object type.
 
 **Example**  
 ```js
-var o = new Object();
+var toStringTag = require('to-string-tag-x');
 
+var o = new Object();
 toStringTag(o); // returns '[object Object]'
 ```
