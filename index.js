@@ -10,8 +10,6 @@
 
 'use strict';
 
-var isNull = require('lodash.isnull');
-var isUndefined = require('validate.io-undefined');
 var toStr = {}.toString;
 
 /**
@@ -27,13 +25,5 @@ var toStr = {}.toString;
  * toStringTag(o); // returns '[object Object]'
  */
 module.exports = function toStringTag(value) {
-  if (isNull(value)) {
-    return '[object Null]';
-  }
-
-  if (isUndefined(value)) {
-    return '[object Undefined]';
-  }
-
   return toStr.call(value);
 };

@@ -27,10 +27,6 @@
   "bugs": {
     "url": "https://github.com/Xotic750/to-string-tag-x/issues"
   },
-  "dependencies": {
-    "lodash.isnull": "^3.0.0",
-    "validate.io-undefined": "^1.0.3"
-  },
   "devDependencies": {
     "@xotic750/eslint-config-standard-x": "^3.1.0",
     "ajv": "^6.1.1",
