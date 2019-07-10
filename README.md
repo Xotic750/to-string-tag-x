@@ -25,6 +25,7 @@
 Get an object's ES6 @@toStringTag.
 
 **See**: [19.1.3.6 Object.prototype.toString ( )](http://www.ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)  
+
 <a name="exp_module_to-string-tag-x--module.exports"></a>
 
 ### `module.exports(value)` ⇒ <code>string</code> ⏏

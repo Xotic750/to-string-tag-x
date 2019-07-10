@@ -1,13 +1,13 @@
 /*!
 {
   "copywrite": "Copyright (c) 2015-present",
-  "date": "2019-07-10T09:42:02.574Z",
+  "date": "2019-07-10T11:55:29.592Z",
   "describe": "",
   "description": "Get an object's ES6 @@toStringTag.",
   "file": "to-string-tag-x.js",
-  "hash": "e3692dde0198cbe65177",
+  "hash": "c1c5831d73290283fdc9",
   "license": "MIT",
-  "version": "2.0.0"
+  "version": "2.0.1"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -133,16 +133,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = toStringTag;
-
-/**
- * @file Get an object's ES6 @@toStringTag.
- * @see {@link http://www.ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring|19.1.3.6 Object.prototype.toString ( )}
- * @version 1.4.3
- * @author Xotic750 <Xotic750@gmail.com>
- * @copyright  Xotic750
- * @license {@link <https://opensource.org/licenses/MIT> MIT}
- * @module to-string-tag-x
- */
 var nativeObjectToString = {}.toString;
 /**
  * The `toStringTag` method returns "[object type]", where type is the
