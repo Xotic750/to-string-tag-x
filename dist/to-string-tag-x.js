@@ -1,13 +1,13 @@
 /*!
 {
   "copywrite": "Copyright (c) 2015-present",
-  "date": "2019-07-10T12:17:21.661Z",
+  "date": "2019-07-10T12:19:01.780Z",
   "describe": "",
   "description": "Get an object's ES6 @@toStringTag.",
   "file": "to-string-tag-x.js",
   "hash": "c1c5831d73290283fdc9",
   "license": "MIT",
-  "version": "2.0.2"
+  "version": "2.0.3"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
