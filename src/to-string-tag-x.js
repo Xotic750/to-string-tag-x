@@ -7,33 +7,23 @@
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
  * @module to-string-tag-x
  */
-
-'use strict';
-
-var isNull = require('lodash.isnull');
-var isUndefined = require('validate.io-undefined');
-var toStr = {}.toString;
+const nativeObjectToString = {}.toString;
 
 /**
  * The `toStringTag` method returns "[object type]", where type is the
  * object type.
  *
- * @param {*} value - The object of which to get the object type string.
+ * @param {*} [value] - The object of which to get the object type string.
  * @returns {string} The object type string.
- * @example
- * var toStringTag = require('to-string-tag-x');
- *
- * var o = new Object();
- * toStringTag(o); // returns '[object Object]'
  */
-module.exports = function toStringTag(value) {
-  if (isNull(value)) {
+export default function toStringTag(value) {
+  if (value === null) {
     return '[object Null]';
   }
 
-  if (isUndefined(value)) {
+  if (typeof value === 'undefined') {
     return '[object Undefined]';
   }
 
-  return toStr.call(value);
-};
+  return nativeObjectToString.call(value);
+}

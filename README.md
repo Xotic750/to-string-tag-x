@@ -21,30 +21,28 @@
 <a name="module_to-string-tag-x"></a>
 
 ## to-string-tag-x
+
 Get an object's ES6 @@toStringTag.
 
 **See**: [19.1.3.6 Object.prototype.toString ( )](http://www.ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)  
-**Version**: 1.4.3  
-**Author**: Xotic750 <Xotic750@gmail.com>  
-**License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
-**Copyright**: Xotic750  
 <a name="exp_module_to-string-tag-x--module.exports"></a>
 
 ### `module.exports(value)` ⇒ <code>string</code> ⏏
+
 The `toStringTag` method returns "[object type]", where type is the
 object type.
 
 **Kind**: Exported function  
-**Returns**: <code>string</code> - The object type string.  
+**Returns**: <code>string</code> - The object type string.
 
-| Param | Type | Description |
-| --- | --- | --- |
+| Param | Type            | Description                                        |
+| ----- | --------------- | -------------------------------------------------- |
 | value | <code>\*</code> | The object of which to get the object type string. |
 
-**Example**  
-```js
-var toStringTag = require('to-string-tag-x');
+**Example**
 
-var o = new Object();
-toStringTag(o); // returns '[object Object]'
+```js
+import toStringTag from 'to-string-tag-x';
+
+console.log(toStringTag({})); // returns '[object Object]'
 ```
