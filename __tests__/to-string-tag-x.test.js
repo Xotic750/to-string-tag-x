@@ -1,6 +1,5 @@
 import toStringTag from 'src/to-string-tag-x';
 
-/* eslint-disable-next-line compat/compat */
 const hasSymbol = typeof Symbol === 'function' && typeof Symbol('') === 'symbol';
 const itSymbol = hasSymbol ? it : xit;
 
@@ -33,9 +32,9 @@ describe('toStringTag', function() {
 
   itSymbol('symbols', function() {
     expect.assertions(2);
-    /* eslint-disable-next-line compat/compat */
+
     expect(toStringTag(Symbol(''))).toBe('[object Symbol]');
-    /* eslint-disable-next-line compat/compat */
+
     expect(toStringTag(Object(Symbol('')))).toBe('[object Symbol]');
   });
 });
