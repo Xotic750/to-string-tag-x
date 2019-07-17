@@ -7,7 +7,7 @@ const nativeObjectToString = {}.toString;
  * @param {*} [value] - The object of which to get the object type string.
  * @returns {string} The object type string.
  */
-export default function toStringTag(value) {
+const toStringTag = function toStringTag(value) {
   if (value === null) {
     return '[object Null]';
   }
@@ -17,4 +17,6 @@ export default function toStringTag(value) {
   }
 
   return nativeObjectToString.call(value);
-}
+};
+
+export default toStringTag;

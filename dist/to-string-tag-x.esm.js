@@ -7,7 +7,7 @@ var nativeObjectToString = {}.toString;
  * @returns {string} The object type string.
  */
 
-export default function toStringTag(value) {
+var toStringTag = function toStringTag(value) {
   if (value === null) {
     return '[object Null]';
   }
@@ -17,6 +17,8 @@ export default function toStringTag(value) {
   }
 
   return nativeObjectToString.call(value);
-}
+};
+
+export default toStringTag;
 
 //# sourceMappingURL=to-string-tag-x.esm.js.map
