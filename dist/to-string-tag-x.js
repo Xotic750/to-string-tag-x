@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-present",
-  "date": "2019-07-21T21:45:16.979Z",
+  "date": "2019-07-21T22:11:23.755Z",
   "describe": "",
   "description": "Get an object's ES6 @@toStringTag.",
   "file": "to-string-tag-x.js",
   "hash": "e3492bffb9dedf9d8a10",
   "license": "MIT",
-  "version": "2.0.17"
+  "version": "2.0.18"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
