@@ -2,7 +2,7 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-present",
-  "date": "2019-08-07T00:50:45.222Z",
+  "date": "2019-08-07T21:39:50.817Z",
   "describe": "",
   "description": "Get an object's ES6 @@toStringTag.",
   "file": "to-string-tag-x.js",
