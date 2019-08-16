@@ -1,4 +1,6 @@
-const nativeObjectToString = {}.toString;
+import methodize from 'simple-methodize-x';
+
+const methodizedToString = methodize({}.toString);
 
 /**
  * The `toStringTag` method returns "[object type]", where type is the
@@ -16,7 +18,7 @@ const toStringTag = function toStringTag(value) {
     return '[object Undefined]';
   }
 
-  return nativeObjectToString.call(value);
+  return methodizedToString(value);
 };
 
 export default toStringTag;
